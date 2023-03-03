@@ -60,6 +60,7 @@ function  toggleContrast(){
     contrastToggle = !contrastToggle /*if oppositie of contrasttoggle (true)*/
     if(contrastToggle){
       document.body.classList += " dark-theme"
+      return document.body.classList.remove("modal--open")
 
     }
     else{
