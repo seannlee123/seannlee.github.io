@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+   
+  </head>
+  <body>
+    <section id="landing-page">
+      <nav>
+        <figure>
+          <img id="personal_logo" src="assets/SL_Logo.png" alt="" />
+        </figure>
+        <ul class="nav__link--list" >
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#About"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >About</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link" onclick="toggleModal()" >
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link click" onclick="toggleContrast()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >
+              <i class="fas fa-adjust"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hello</h1>
+          <h1 class="title title--secondary">My name is Sean</h1>
+          <p class="header__para">
+            I'm a <b class="blue">Frontend Software Engineer</b> with a passion
+            for development and great user experiences. <br />
+            <!--  start a new line -->
+            Here's a bit more
+             <b class="blue click" onclick="toggleModal()">about me </b>.
+          </p>
+          <!-- our icons -->
+          <div class="social__list">
+            <a
+              href="https://www.linkedin.com/in/seann-lee-63246113b/"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/seannlee123"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="./assets/SLResume.docx.pdf"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fas fa-file-pdf"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <a href="#">
+      <button class="mail_btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+      </button>
+    </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+
+      <div class="modal">
+        <div class="modal__half modal__about"> 
+          <h3 class="modal__title modal__title--about"> More about me!</h3>
+          <h4 class="modal__sub-title modal_sub-title--about">Front End Software Engineer</h4>
+          <p class="modal__para">
+            I am an aspiring <b class="blue">front-end software engineer</b>. I am currently learning
+            different frameworks and languages to understand best practices
+            from <b class="blue">talented </b> and <b class="blue">
+              experienced</b> software engineers daily. 
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png">
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+              <span class="language__name">React</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/SAS_logo.png" alt="">
+              <span class="language__name">SAS</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/sql-file-format-symbol.png" alt="">
+              <span class="language__name">SQL</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/python.png" alt="">
+              <span class="language__name">Python</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/R.png" alt="">
+              <span class="language__name">R</span>
+            </figure>
+            
+          </div>
+        </div>
+        <div class="modal__half modal__contact"> 
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>   
+          <h3 class="modal__title modal__title--contact">
+            You can reach me here!
+
+          </h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">
+            I am looking for opportunities
+          </h3>
+          <form id="contact__form" onsubmit="contact(event)" action="">
+            <div class="form__item">
+              <label class="form__item--label" >Name</label>
+               <input class="input" name="user_name" type="text" > </input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label" >Email</label>
+               <input class="input" name="user_email" type="email" > </input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label" >Message</label>
+               <textarea class="input" name="message" type="text" > </textarea>
+              
+              </div>
+              <button id="contact__submit" class="form__submit">
+              Send it here!  
+              </button>
+            </form>
+            <div class="modal__overlay modal__overlay--loading">
+              <i class="fas fa-spinner"></i>
+            </div>
+            <div class="modal__overlay modal__overlay--success">
+              Thank you, I will reach out to you soon!
+            </div>
+        </div>                
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are my <span class="blue">Projects </span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./assets/c54 (2).PNG" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project_description--title">Django project</h3>
+                  <h4 class="project__description--sub-title">
+                    Bootstrap, Python, HTML, CSS
+                  </h4>
+                  <p class="project__description--para">
+                    Tested functionality of Django webframe work utilizing built
+                    in functions, implementing CRUD (Create Read Update and
+                    Delete), and dynamic URLs.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/unnamed-chunk-11-1.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project_description--title">
+                    Video-game-analysis-with-R
+                  </h3>
+                  <h4 class="project__description--sub-title">R language</h4>
+                  <p class="project__description--para">
+                    Using R language to perform data analysis with video game
+                    sales based on continents and regions. This contains data
+                    visualization, LR, and training models.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container "> 
+        <div class="row footer__row">
+        <figure>
+          <img src="assets/SL_Logo.png" class="footer__logo--img" alt="" />
+        </figure>
+        <div class="footer__social--list">
+          <a
+            href="https://github.com/seannlee123" target="_blank"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+          >
+            Github
+          </a>
+          <a
+            href="https://www.linkedin.com/in/seann-lee-63246113b/" target="_bla"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="#" onclick="toggleModal()"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+          >
+            Contact
+          </a>
+          <a
+            href="./assets/SLResume.docx.pdf" target="_blank"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+          >
+            Resume
+          </a>
+        </div>
+        <div class="footer__copyright">
+            Copyright © Seann Lee
+        </div>
+      </div>
+    </div>
+    </footer>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("OsOsjDwGHI4qPHH-J");
+})();
+</script>
+  </body>
+</html>
